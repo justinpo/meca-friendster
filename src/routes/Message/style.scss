@@ -55,13 +55,25 @@
     grid-template-columns: 320px auto;
     grid-gap: 24px;
 
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr;
+    }
+
     &_image {
       width: 100%;
+
+      @include breakpoint(sm) {
+        margin: 1em 0 0;
+      }
     }
 
     &_message {
       color: $white;
       align-self: center;
+
+      @include breakpoint(sm) {
+        text-align: center;
+      }
 
       span {
         color: $green;

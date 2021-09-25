@@ -22,7 +22,7 @@ const schema = yup.object().shape({
 
 function Message() {
   const [file, setFile] = useState(null);
-  const [isUploaded, setIsUploaded] = useState(false);
+  const [isUploaded, setIsUploaded] = useState(true);
 
   const {
     register,
