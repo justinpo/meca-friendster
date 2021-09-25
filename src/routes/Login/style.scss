@@ -1,0 +1,52 @@
+@use '../../scss' as *;
+
+.Login {
+  &_header {
+    background: $blue;
+    padding: 1.5em 2em;
+  }
+
+  &_card {
+    border: 1px solid $gray;
+    width: 520px;
+
+    &_head {
+      background: #f4f4f4;
+      padding: 1em;
+    }
+
+    &_body {
+      padding: 1.5em;
+      display: grid;
+      grid-template-columns: 84px auto;
+      grid-gap: 1em;
+
+      @include breakpoint(sm) {
+        grid-template-columns: 1fr;
+        grid-gap: 0.5em;
+      }
+    }
+  }
+
+  &_container {
+    padding-top: 80px !important;
+    display: flex;
+    justify-content: center;
+  }
+
+  &_label {
+    color: $darkgray;
+    font-weight: 600;
+    text-align: right;
+    font-size: 0.875rem;
+
+    @include breakpoint(sm) {
+      margin: 1em 0 0;
+      text-align: left;
+    }
+  }
+
+  &_input {
+    width: 100%;
+  }
+}

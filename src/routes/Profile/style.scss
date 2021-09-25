@@ -1,0 +1,154 @@
+@use '../../scss' as *;
+
+.Profile {
+  background-image: url('../../assets/emo-pattern.png');
+  height: 100vh;
+  overflow: auto;
+
+  &_about {
+    display: grid;
+    grid-template-columns: 255px auto;
+    grid-gap: 1em;
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+
+    &_bio {
+      font-weight: 600;
+      color: $white;
+      line-height: 1.5;
+    }
+
+    &_image {
+      width: 100%;
+
+      @include breakpoint(md) {
+        width: 240px;
+      }
+    }
+  }
+
+  &_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1em;
+
+    &_photo {
+      min-height: 140px;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &_container {
+    padding-top: 64px !important;
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-gap: 2em;
+
+    @include breakpoint(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &_navbar {
+    background: $pink;
+    border: 2px dashed $green;
+    padding: 0.5em 1.25em;
+    color: $white;
+    margin: 1.5em 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    &_link {
+      margin: 0 1em 0 0;
+      color: $white;
+    }
+  }
+
+  &_player {
+    width: 100%;
+  }
+
+  &_avatar {
+    height: 96px;
+    width: 96px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &_comment {
+    display: grid;
+    grid-template-columns: 96px auto;
+    grid-gap: 1em;
+
+    &_username {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $cyan;
+    }
+
+    &_message {
+      color: $white;
+      margin: 0.5em 0 0;
+      white-space: pre-wrap;
+    }
+  }
+
+  &_friend {
+    &_username {
+      margin: 0.5em 0 0;
+      color: $cyan;
+    }
+  }
+
+  &_bubble {
+    position: relative;
+    padding: 0.75rem;
+    margin: 0 0 1em 0.5em;
+    color: $pink;
+    font-weight: 600;
+    background: #fff;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -20px; /* value = - border-top-width - border-bottom-width */
+      left: 40px; /* controls horizontal position */
+      /* reduce the damage in FF3.0 */
+      display: block;
+      width: 0;
+
+      top: 10px; /* controls vertical position */
+      bottom: auto;
+      left: -30px; /* value = - border-left-width - border-right-width */
+      border-width: 15px 30px 15px 0;
+      border-color: transparent #5a8f00;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -13px; /* value = - border-top-width - border-bottom-width */
+      left: 47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+      border-width: 13px 13px 0;
+      border-style: solid;
+      border-color: #fff transparent;
+      /* reduce the damage in FF3.0 */
+      display: block;
+      width: 0;
+
+      top: 16px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+      bottom: auto;
+      left: -21px; /* value = - border-left-width - border-right-width */
+      border-width: 9px 21px 9px 0;
+      border-color: transparent #fff;
+    }
+  }
+}

@@ -1,11 +1,20 @@
 import './style.scss';
 
-function Input({ placeholder, name, isDisabled, value, type, error, register }) {
+function Input({
+  className,
+  placeholder,
+  name,
+  isDisabled,
+  value,
+  type,
+  error,
+  register,
+}) {
   return (
     <div>
       <input
         type={type}
-        className="Input"
+        className={`Input ${className || ''}`}
         placeholder={placeholder}
         value={value}
         disabled={isDisabled}

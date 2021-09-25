@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import Login from 'routes/Login';
 import Message from 'routes/Message';
+import Profile from 'routes/Profile';
 
 function RootRouter() {
   return (
@@ -8,7 +10,13 @@ function RootRouter() {
         <Route path="/message">
           <Message />
         </Route>
-        <Redirect to="/message" />
+        <Route path="/profile">
+          <Profile />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Redirect to="/login" />
       </Switch>
     </Router>
   );

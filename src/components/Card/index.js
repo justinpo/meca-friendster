@@ -3,10 +3,12 @@ import './style.scss';
 function Card({ children, className, label }) {
   return (
     <div className={`Card ${className || ''}`}>
-      <div className="Card_head">
-        <p className="Card_label">{label}</p>
-      </div>
-      {children}
+      {label && (
+        <div className="Card_head">
+          <p className="Card_label">{label}</p>
+        </div>
+      )}
+      <div className="Card_body">{children}</div>
     </div>
   );
 }

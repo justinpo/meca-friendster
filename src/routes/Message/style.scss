@@ -11,8 +11,6 @@
   }
 
   &_card {
-    padding: 2em;
-
     @include breakpoint(sm) {
       padding: 0 1.5em 2em;
     }

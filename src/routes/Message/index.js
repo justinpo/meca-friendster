@@ -3,7 +3,7 @@ import { collection, addDoc } from 'firebase/firestore';
 import { ref, getDownloadURL, uploadBytes } from 'firebase/storage';
 import * as yup from 'yup';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useMutation } from 'react-query';
 
@@ -23,6 +23,10 @@ const schema = yup.object().shape({
 function Message() {
   const [file, setFile] = useState(null);
   const [isUploaded, setIsUploaded] = useState(false);
+
+  useEffect(() => {
+    document.title = 'Friendster | Message for Meca';
+  }, []);
 
   const {
     register,

@@ -3,10 +3,15 @@
 .Card {
   background: $pink;
   border: 2px dashed $green;
+  margin: 0 0 1.5em;
 
   &_head {
     background: $violet;
     padding: 0.25em 0.5em;
+  }
+
+  &_body {
+    padding: 1.25em;
   }
 
   &_label {
