@@ -1,0 +1,13 @@
+@use '../../scss' as *;
+
+.TextArea {
+  font-size: 0.875rem;
+  padding: 0.25em 0.5em;
+
+  &_errorMessage {
+    font-size: 0.875rem;
+    color: $white;
+    text-align: left;
+    margin: 1em 0 0;
+  }
+}

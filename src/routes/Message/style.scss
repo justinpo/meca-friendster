@@ -1,0 +1,71 @@
+@use '../../scss' as *;
+
+.Message {
+  background-image: url('../../assets/emo-pattern.png');
+  height: 100vh;
+  overflow: auto;
+
+  &_avatar {
+    font-size: 0.875rem;
+    width: max-content;
+  }
+
+  &_card {
+    padding: 2em;
+
+    @include breakpoint(sm) {
+      padding: 0 1.5em 2em;
+    }
+  }
+
+  &_container {
+    padding-top: 64px !important;
+  }
+
+  &_grid {
+    display: grid;
+    grid-template-columns: 96px auto;
+    grid-gap: 1.5em 0.5em;
+
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr;
+      grid-gap: 0.5em;
+    }
+  }
+
+  &_label {
+    color: $white;
+    font-weight: 600;
+    text-align: right;
+    font-size: 0.875rem;
+
+    @include breakpoint(sm) {
+      margin: 1em 0 0;
+      text-align: left;
+    }
+  }
+
+  &_textarea {
+    min-height: 160px;
+    width: 100%;
+  }
+
+  &_thanks {
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-gap: 24px;
+
+    &_image {
+      width: 100%;
+    }
+
+    &_message {
+      color: $white;
+      align-self: center;
+
+      span {
+        color: $green;
+      }
+    }
+  }
+}

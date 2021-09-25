@@ -1,0 +1,16 @@
+@use '../../scss' as *;
+
+.Card {
+  background: $pink;
+  border: 2px dashed $green;
+
+  &_head {
+    background: $violet;
+    padding: 0.25em 0.5em;
+  }
+
+  &_label {
+    color: $green;
+    font-weight: 600;
+  }
+}

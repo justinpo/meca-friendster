@@ -1,0 +1,9 @@
+@use '../../scss' as *;
+
+.Button {
+  background: $blue;
+  color: $white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25em 1em;
+}
