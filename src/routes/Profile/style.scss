@@ -86,9 +86,19 @@
     display: grid;
     grid-template-columns: 96px auto;
     grid-gap: 1em;
+    padding: 1em 0;
+    border-bottom: 1px solid $gray;
+
+    &:first-of-type {
+      padding: 0 0 1em;
+    }
+
+    &:last-of-type {
+      padding: 1em 0 0;
+      border-bottom: none;
+    }
 
     &_username {
-      font-size: 1.25rem;
       font-weight: 600;
       color: $cyan;
     }
