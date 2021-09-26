@@ -134,7 +134,7 @@ function Profile() {
               <audio className="Profile_player" src={Kabet} autoPlay controls />
             </Card>
             <Card label={`${USERNAME}'s Friends`}>
-              <div>
+              <div className="Profile_friends">
                 {messages?.map((m) => {
                   const { avatar, username } = m;
                   return (

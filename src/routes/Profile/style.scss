@@ -161,4 +161,11 @@
       border-color: transparent #fff;
     }
   }
+
+  &_friends {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    justify-items: center;
+  }
 }
