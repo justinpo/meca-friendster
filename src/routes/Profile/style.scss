@@ -98,6 +98,10 @@
       border-bottom: none;
     }
 
+    &:only-of-type {
+      padding: 0;
+    }
+
     &_username {
       font-weight: 600;
       color: $cyan;
@@ -114,6 +118,12 @@
     &_username {
       margin: 0.5em 0 0;
       color: $cyan;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 96px;
+      font-size: 0.875rem;
+      font-weight: 600;
     }
   }
 
