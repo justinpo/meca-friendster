@@ -39,7 +39,7 @@ function Profile() {
   return (
     <div className="Profile">
       <Container className="Profile_container">
-        <img src={Friendster} alt="Friendster Logo" />
+        <img className="Profile_logo" src={Friendster} alt="Friendster Logo" />
         <div className="Profile_navbar">
           <a className="Profile_navbar_link" href="/profile">
             Home

@@ -10,12 +10,6 @@
     width: max-content;
   }
 
-  &_card {
-    @include breakpoint(sm) {
-      padding: 0 1.5em 2em;
-    }
-  }
-
   &_container {
     padding-top: 64px !important;
   }
@@ -36,6 +30,10 @@
     font-weight: 600;
     text-align: right;
     font-size: 0.875rem;
+
+    &:first-of-type {
+      margin: 0;
+    }
 
     @include breakpoint(sm) {
       margin: 1em 0 0;

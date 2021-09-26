@@ -5,6 +5,12 @@
   height: 100vh;
   overflow: auto;
 
+  &_logo {
+    @include breakpoint(sm) {
+      width: 280px;
+    }
+  }
+
   &_about {
     display: grid;
     grid-template-columns: 255px auto;
@@ -33,6 +39,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
+
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &_photo {
       min-height: 140px;

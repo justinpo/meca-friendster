@@ -63,7 +63,7 @@ function Message() {
     <div className="Message">
       <Container className="Message_container">
         <Card label={`Message for ${USERNAME}`}>
-          <div className="Message_card">
+          <div>
             {isUploaded ? (
               <div className="Message_thanks">
                 <img className="Message_thanks_image" src={Meca} alt="Meca selfie" />
